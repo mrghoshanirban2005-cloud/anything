@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Share your workshop reaction, feedback, and ice cream request.">
+  <title>Workshop Afterglow | Share the good stuff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Workshop Afterglow home">
+      <span class="brand-mark">W</span>
+      <span>Workshop<br><strong>Afterglow</strong></span>
+    </a>
+    <span class="event-tag">RUAS · September 2026</span>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> The room is still buzzing</p>
+        <h1 id="hero-title">Help us make the next workshop <em>even better.</em></h1>
+        <p class="hero-intro">A tiny check-in for the people who made today worth showing up for. Tap a reaction, leave a note, or make an important request.</p>
+        <div class="hero-meta">
+          <span><strong>12 min</strong> to complete</span>
+          <span class="meta-rule"></span>
+          <span>Anonymous by default</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sticker sticker-spark">✦</div>
+        <div class="poster-card">
+          <span class="poster-small">THANKS FOR</span>
+          <span class="poster-big">SHOWING<br>UP.</span>
+          <span class="poster-small poster-bottom">KEEP MAKING THINGS</span>
+        </div>
+        <div class="sticker sticker-note">notes<br>from<br>the room</div>
+      </div>
+    </section>
+
+    <section class="content-grid" aria-label="Workshop response form">
+      <div class="section-intro">
+        <span class="step-number">01</span>
+        <div>
+          <p class="eyebrow">First things first</p>
+          <h2>How did it feel?</h2>
+          <p>Give the workshop a quick vibe check. No overthinking required.</p>
+        </div>
+      </div>
+
+      <form id="workshop-form">
+        <fieldset class="reaction-fieldset">
+          <legend class="sr-only">Choose your workshop reaction</legend>
+          <label class="reaction-card">
+            <input type="radio" name="reaction" value="Loved it" required>
+            <span class="reaction-icon">♥</span>
+            <span class="reaction-label">Loved it</span>
+            <span class="reaction-sub">I left inspired</span>
+          </label>
+          <label class="reaction-card">
+            <input type="radio" name="reaction" value="Good stuff">
+            <span class="reaction-icon">✦</span>
+            <span class="reaction-label">Good stuff</span>
+            <span class="reaction-sub">I learned a lot</span>
+          </label>
+          <label class="reaction-card">
+            <input type="radio" name="reaction" value="Needs a remix">
+            <span class="reaction-icon">↗</span>
+            <span class="reaction-label">Needs a remix</span>
+            <span class="reaction-sub">I have thoughts</span>
+          </label>
+        </fieldset>
+
+        <div class="response-block">
+          <div class="section-intro compact">
+            <span class="step-number">02</span>
+            <div>
+              <p class="eyebrow">Leave a trace</p>
+              <h2>What are you taking with you?</h2>
+            </div>
+          </div>
+          <label class="field-label" for="feedback">Your feedback <span>Optional</span></label>
+          <textarea id="feedback" name="feedback" rows="4" maxlength="500" placeholder="A moment that clicked, a question we should answer, or an idea for next time..."></textarea>
+          <div class="field-footer"><span>Big or tiny, it all helps.</span><span id="character-count">0 / 500</span></div>
+        </div>
+
+        <div class="response-block treat-block">
+          <div class="section-intro compact">
+            <span class="step-number">03</span>
+            <div>
+              <p class="eyebrow">The important question</p>
+              <h2>Ice cream, anyone?</h2>
+            </div>
+          </div>
+          <p class="treat-copy">We might make a post-workshop ice cream run. Tell us what would make your scoop perfect.</p>
+          <div class="ice-cream-options">
+            <label class="select-option"><input type="radio" name="iceCream" value="Yes, count me in"><span>Yes, count me in</span></label>
+            <label class="select-option"><input type="radio" name="iceCream" value="Maybe, tell me more"><span>Maybe, tell me more</span></label>
+            <label class="select-option"><input type="radio" name="iceCream" value="I will pass"><span>I will pass</span></label>
+          </div>
+          <div class="flavour-row">
+            <label class="field-label" for="flavour">Dream flavour <span>Optional</span></label>
+            <input id="flavour" name="flavour" type="text" maxlength="80" placeholder="Mango sorbet, please...">
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <label class="privacy-check"><input type="checkbox" name="anonymous" checked><span>Keep my response anonymous</span></label>
+          <button type="submit" class="submit-button">Send my response <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="thank-you" id="thank-you" hidden aria-live="polite">
+      <span class="thank-you-icon">✦</span>
+      <p class="eyebrow">Response received</p>
+      <h2>That was a good one.</h2>
+      <p>Thanks for helping us make the next workshop warmer, sharper, and more delicious.</p>
+      <button type="button" id="new-response" class="text-button">Send another response <span aria-hidden="true">↗</span></button>
+    </section>
+  </main>
+
+  <footer><span>Made for curious people.</span><span>Workshop Afterglow <span aria-hidden="true">✦</span></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
